@@ -1,0 +1,61 @@
+@media screen and (min-width: 849px) {
+  .contenedor-header button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .contenedor-header nav,
+  .redes {
+    display: none;
+  }
+
+  .contenedor-header header .menu {
+    display: block;
+    margin-right: 40px;
+  }
+
+  .productos .fila {
+    display: block;
+    width: 80%;
+  }
+  .productos .fila .col img {
+    width: 80%;
+  }
+
+  .servicios {
+    display: block;
+  }
+  .servicios img {
+    width: 80%;
+    padding-top: 100px;
+  }
+  .nosotros .fila {
+    display: block;
+  }
+  .nosotros .fila .col {
+    width: 100%;
+    margin: auto;
+  }
+
+  .contacto .fila {
+    display: block;
+  }
+  .contacto .fila .col {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .contacto .fila-datos {
+    display: block;
+  }
+  .contacto .fila-datos .col {
+    margin-bottom: 20px;
+  }
+  footer .info {
+    display: block;
+    text-align: center;
+  }
+  footer .info p {
+    margin-bottom: 10px;
+  }
+}
