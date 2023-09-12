@@ -1,33 +1,172 @@
-@media screen and (min-width: 849px) {
-  .contenedor-header button {
+@media screen and (max-width: 568px) {
+  .container-prod {
+    margin-top: 25em;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .container-prod {
+    margin-top: 15em;
+  }
+
+  .col input {
+    width: 100%;
+  }
+
+  #contacto .fila input {
+    width: 90%;
+  }
+
+  #contacto textarea {
+    width: 90%;
+  }
+
+  #contacto .fila1 {
+    flex-direction: column;
+  }
+
+  #contacto .formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 955px) {
+  .contenedor-header .responsive {
+    display: block;
+    position: absolute;
+    background-color: #541645;
+    top: 96px;
+    right: 0;
+    height: 120vh;
+    width: 60vw;
+    padding: 60px 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  #nav a {
+    color: #ffff;
+    font-size: 15px;
+  }
+
+  .contenedor-header #burguer-menu {
+    display: block;
+    position: absolute;
+    width: 35px;
+    margin: 0 15px;
+    cursor: pointer;
+    right: 3px;
+  }
+
+  .contenedor-header .ocultar {
+    display: none;
+  }
+
+  .carrito-productos {
+    display: flex;
+  }
+
+  .carrito-productos .barra-lateral {
+    display: flex;
+  }
+
+  .barra-lateral #list-barra {
+    flex-wrap: wrap;
+    position: absolute;
+    flex-direction: row;
+  }
+
+  .barra-lateral #list-barra .title-list {
+    display: none;
+  }
+
+  .barra-lateral #list-barra .menu-btn {
+    padding: 12px 10px;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 500;
+    background-color: #911070;
+    color: #fff;
+    border-radius: 30px;
+  }
+
+  .container-prod {
+    margin-top: 5em;
+  }
+
+  #servicios {
+    padding: 5px 0;
+  }
+
+  #servicios .info h2 {
+    padding: 40px;
+  }
+
+  #servicios img {
     display: none;
   }
 }
 
-@media screen and (max-width: 850px) {
-  .contenedor-header nav,
-  .redes {
+@media screen and (max-width: 1200px) {
+  .contenedor-header header {
+    justify-content: start;
+    gap: 35px;
+  }
+
+  #nav > .productos,
+  .servicios,
+  .news {
     display: none;
   }
 
-  .contenedor-header header .menu {
-    display: block;
-    margin-right: 40px;
+  #cart-container {
+    position: absolute;
+    right: 90px;
+    cursor: pointer;
   }
 
-  .productos .fila {
-    display: block;
-    width: 80%;
+  .count-products {
+    margin-left: -15px;
+    margin-top: -30px;
   }
-  .productos .fila .col img {
+
+  #productos .fila {
+    display: block;
     width: 80%;
   }
 
-  .servicios {
+  #productos .fila .col1 img {
+    width: 30%;
+  }
+
+  .card-cosmetic {
+    height: 415px;
+  }
+
+  .startDiv {
+    height: 100px;
+  }
+
+  .startDiv p {
+    display: none;
+  }
+
+  .precioCard {
+    margin-top: 11em;
+    height: 100px;
+  }
+
+  #servicios {
     display: block;
   }
-  .servicios img {
-    width: 80%;
+  #servicios img {
+    width: 40%;
     padding-top: 100px;
   }
   .nosotros .fila {
@@ -57,5 +196,17 @@
   }
   footer .info p {
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  body {
+    margin: 0 50px;
+    width: 95%;
+    padding: 0 80px;
+  }
+
+  .contenedor-header {
+    position: relative;
   }
 }

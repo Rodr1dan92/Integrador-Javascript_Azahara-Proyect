@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="estilo.css" />
     <link rel="stylesheet" href="responsive_landingpage.css" />
+
     <title>AZAHARA ESTETICA</title>
   </head>
   <body>
@@ -13,46 +14,63 @@
     <div class="contenedor-header">
       <header>
         <img src="./img/Azahara-icono.jpg" alt="logo" id="logo" />
-        <nav id="nav">
-          <a href="#">inicio</a>
-          <a href="#">Productos</a>
-          <a href="#">Servicios</a>
-          <a href="#">Nosotros</a>
-          <a href="#">Contacto</a>
+        <nav id="nav" class="ocultar">
+          <a href="#inicio">inicio</a>
+          <a href="#info-cards">Nosotros</a>
+          <a href="#productos" class="productos">Productos</a>
+          <a href="#contacto">Shop</a>
+          <a href="#servicios" class="servicios">Servicios</a>
+          <a href="#contacto">Contacto</a>
+          <a href="#news" class="news">Novedades!</a>
         </nav>
-        <div class="redes">
-          <a href="https://twitter.com/" target="_blank">
-            <img src="./img/twitter.png" alt="twitter icon" />
-          </a>
-          <a href="https://instagram.com/" target="_blank">
-            <img src="./img/instagram.png" alt="instagram icon" />
-          </a>
-          <a href="https://facebook.com/" target="_blank">
-            <img src="./img/facebook.png" alt="facebook icon" />
-          </a>
+        <div id="cart-container">
+          <img src="./img/shop-cart.png" alt="carrito-img" id="cart" />
+          <div class="count-products">
+            <span id="contador-productos">0</span>
+          </div>
         </div>
-        <button class="menu">
-          <img src="./img/burguer-icon.png" alt="menu" />
-        </button>
+
+        <div class="container-cart-products ocultar-carrito">
+          <h3 class="cart-vacio">Carrito Vacio</h3>
+        </div>
+
+        <img src="./img/burguer-icon.png" alt="menu" id="burguer-menu" />
       </header>
+      <div class="whatsapp">
+        <a href="https://api.whatsapp.com/send?phone=5492644038158">
+          <img src="./img/WhatsApp-Logo.svg" alt="logo-wsp" id="wsp-img" />
+        </a>
+      </div>
     </div>
 
     <!---------------------- SECCION INICIO --------------->
-    <section class="inicio">
+    <section id="inicio">
       <div class="info">
-        <h2>BIENVENIDOS A AZAHARA SPA</h2>
         <h4>
-          EL CUIDADO DE LA PIEL <br />
-          NOS MOTIVA A SER MEJORES PERSONAS
+          DEJÁ TU SALUD Y BELLEZA <br />
+          EN MANOS DE PROFESIONALES
         </h4>
-        <p>Veni a conocernos en pleno centro de San Juan</p>
+        <p>Te cuidamos en todo momento</p>
       </div>
+    </section>
 
-      <button id="btn-inicio">Welcome</button>
+    <!------------------------ SECCION NOSOTROS--------------->
+    <section id="nosotros">
+      <div class="contenedor-titulo">
+        <div class="info">
+          <h2>NOSOTRAS</h2>
+        </div>
+      </div>
+      <p>
+        Somos una empresa innovadora que combina tecnología y naturaleza en la
+        elaboración de nuestros productos, atendemos las inquietudes de cada
+        paciente, desde hace más de 5 años, cada año vamos creciendo y mejorando
+        la calidad de vida de todos los clientes.
+      </p>
     </section>
 
     <!---------------------- SECCION PRODUCTOS --------------->
-    <section class="productos">
+    <section id="productos">
       <div class="fila">
         <div class="col1">
           <img src="img/productos-img.jpg" alt="productos-chica" />
@@ -65,14 +83,33 @@
             </div>
           </div>
           <p>
-            Disponemos de una tienda virtual donde podrás encontrar los
-            productos que necesitas, mantenemos un stock con mucha variedad de
-            distintos laboratorios.
+            Contamos con diversos artículos, elaborados con materia prima libre
+            de conservantes y quimicos extras, lo que permite cuidar mucho mejor
+            la cutis y prevenir dermatitis, alergias, etc.
           </p>
         </div>
       </div>
     </section>
 
+    <!---------------------- SECCION SHOPPING --------------->
+    <section id="shop-container">
+      <div class="carrito-productos">
+        <aside class="barra-lateral">
+          <ul id="list-barra">
+            <li class="title-list">Categorías</li>
+            <li class="menu-btn cat" id="Facial">Linea Facial</li>
+            <li class="menu-btn cat" id="Corporal">Linea Corporal</li>
+            <li class="menu-btn cat" id="Capilar">Linea Capilar</li>
+            <li class="menu-btn cat" id="Maquillaje">Linea Maquillaje</li>
+            <li class="menu-btn cat" id="todos">Mostrar Todos</li>
+          </ul>
+        </aside>
+        <div class="container-prod">
+          <h2 class="titulo-container" id="titulo-div"></h2>
+          <div id="products-container" class="productos"></div>
+        </div>
+      </div>
+    </section>
     <!---------------------- SECCION CARDS --------------->
     <section id="info-cards">
       <h2>PORQUE ELEGIRNOS</h2>
@@ -120,7 +157,7 @@
     </section>
 
     <!---------------------- SECCION SERVICIOS --------------->
-    <section class="servicios">
+    <section id="servicios">
       <div class="info">
         <h2>SERVICIOS</h2>
         <p>
@@ -135,54 +172,68 @@
       <img src="img/servicios.png" alt="chica-servicios" />
     </section>
 
-    <!-- SECCION NOSOTROS -->
-    <section class="nosotros">
-      <div class="contenedor-titulo">
-        <div class="info">
-          <h2>NOSOTRAS</h2>
-        </div>
-      </div>
-      <p>
-        Somos una empresa innovadora que combina tecnología con las técnicas más
-        efectivas y la calidez humana de nuestro equipo, escuchando las
-        inquietudes de cada paciente, desde hace más de 10 años, con la firme
-        intención de atender a cada uno, con sus deseos y necesidades.
-      </p>
-    </section>
-
     <!-- SECCION CONTACTO -->
-    <section class="contacto">
+    <section id="contacto">
       <div class="contenido-seccion">
         <div class="contenedor-titulo">
           <div class="info">
             <h2>CONTACTO</h2>
           </div>
         </div>
-        <div class="fila">
-          <div class="col">
-            <input type="text" placeholder="Ingrese Email" />
+        <form action="" class="formulario" id="form">
+          <div class="fila1">
+            <div class="col">
+              <input type="text" id="nombre" placeholder="Nombre" />
+              <p></p>
+            </div>
+            <div class="col">
+              <input type="text" id="apellido" placeholder="Apellido" />
+              <p></p>
+            </div>
           </div>
-          <div class="col">
-            <input type="text" placeholder="Ingrese Nombre" />
+          <div class="fila">
+            <input type="email" id="email" placeholder="Email" />
+            <p></p>
           </div>
-        </div>
-        <div class="mensaje">
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Ingresa el Mensaje"
-          ></textarea>
-          <button>Enviar Mensaje</button>
-        </div>
-        <div class="fila-datos">
-          <ul>
-            <li><strong>DIRECCION</strong> Avenida Libertador 2575</li>
-            <li><strong>TELEFONO</strong> 264 - 456788</li>
-            <li><strong>HORARIOS</strong> Lunes a Sábado, 8:00h - 24:00h</li>
-          </ul>
-          <img src="./img/Azahara-icono.jpg" alt="logo-footer" />
+          <div class="fila">
+            <input
+              type="number"
+              id="whatsapp"
+              placeholder="Whatsapp (sin 0 ni 15)"
+            />
+            <p></p>
+          </div>
+          <div class="mensaje">
+            <textarea
+              id="messageArea"
+              cols="30"
+              rows="10"
+              placeholder="Escribenos Algo"
+            ></textarea>
+            <p></p>
+          </div>
+          <div class="send-form">
+            <button type="submit" id="suscripcion">Suscribirse</button>
+            <p class="message-submit">Revisá los datos antes de suscribirte</p>
+          </div>
+        </form>
+      </div>
+      <div class="fila-datos">
+        <ul>
+          <li><strong>DIRECCION</strong> Avenida Libertador 2575</li>
+          <li><strong>TELEFONO</strong> 264 - 456788</li>
+          <li><strong>HORARIOS</strong> Lunes a Sábado, 8:00h - 24:00h</li>
+        </ul>
+        <div class="redes">
+          <a href="https://twitter.com/" target="_blank">
+            <img src="./img/twitter.png" alt="twitter icon" />
+          </a>
+          <a href="https://instagram.com/" target="_blank">
+            <img src="./img/instagram.png" alt="instagram icon" />
+          </a>
+          <a href="https://facebook.com/" target="_blank">
+            <img src="./img/facebook.png" alt="facebook icon" />
+          </a>
         </div>
       </div>
     </section>
@@ -194,7 +245,10 @@
         </p>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./javascript/validaciones.js"></script>
+    <script src="./javascript/productos.js"></script>
+    <script src="./javascript/cartService.js"></script>
+    <script src="./javascript/index.js" defer></script>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="index.js"></script>
 </html>
