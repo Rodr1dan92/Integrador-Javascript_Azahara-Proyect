@@ -295,7 +295,7 @@ body {
 
 #productos {
   background-color: snow;
-  padding: 80px 20px;
+  padding: 130px 20px;
   position: relative;
   margin: auto;
   display: flex;
@@ -397,6 +397,7 @@ body {
 
 #list-barra .menu-btn {
   font-size: 1.5em;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -512,8 +513,9 @@ body {
   text-align: center;
 }
 
-#info-cards p {
+#info-cards > p {
   width: 80%;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -529,6 +531,11 @@ body {
   gap: 50px;
 }
 
+.info-cards-container .card p{
+  font-size: 21px;
+  padding: 0 30px;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -536,8 +543,8 @@ body {
   align-items: center;
   text-align: center;
   width: 400px;
-  height: 570px;
-  gap: 20px;
+  height: 600px;
+  gap: 30px;
   border-radius: 10px;
   padding: 25px 15px;
   background: var(--principal);
@@ -737,10 +744,11 @@ body {
 
 #contacto .fila-datos li {
   color: #000000;
+  font-size: 25px;
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 2rem;
+  gap: 5rem;
   padding: 20px;
 }
 
