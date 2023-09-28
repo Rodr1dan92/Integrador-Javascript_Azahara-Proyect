@@ -1,22 +1,25 @@
+import { cosmeticos } from "./productos.js";
+import * as cartService from "./cartService.js"
+import * as validaciones from "./validaciones.js"
+
 // Asignación de Selectores HTML
 
 const navbar = document.getElementById("nav");
 const botonCart = document.querySelector("#cart-container");
-const carrito = document.getElementById("cart");
 const burgerMenu = document.getElementById("burguer-menu");
 const cardContainerProd = document.getElementById("products-container");
 const CategoriasLat = document.querySelectorAll(".cat");
 const tituloDiv = document.getElementById("titulo-div");
-const searchInput = document.getElementById("buscador");
-//Eventos para botones del navbar
 
+
+//Eventos para botones del navbar
 burgerMenu.addEventListener("click", () => {
   navbar.classList.toggle("ocultar");
   navbar.classList.toggle("responsive");
 });
 
 botonCart.addEventListener("click", () => {
-  cartProducts.classList.toggle("ocultar-carrito");
+  cartService.cartProducts.classList.toggle("ocultar-carrito");
 });
 
 // Crear card en el div del contenedor de productos
@@ -46,8 +49,8 @@ const crearTarjetasProductos = (productos) => {
       nombre: producto.nombre,
       precio: producto.precio,
     };
-    nuevoProducto.addEventListener("click", () => addToCartLoclStorage(objeto));
-    UpProdToCart(producto);
+    nuevoProducto.addEventListener("click", () => cartService.addToCartLoclStorage(objeto));
+    cartService.UpProdToCart(producto);
   });
 };
 
@@ -68,11 +71,11 @@ CategoriasLat.forEach((boton) => {
         (producto) => producto.categoría === e.currentTarget.id
       );
       crearTarjetasProductos(productosBoton);
-      updateTotalsCart();
+      cartService.updateTotalsCart();
     } else {
       tituloDiv.innerText = "Todos";
       crearTarjetasProductos(cosmeticos);
-      updateTotalsCart();
+      cartService.updateTotalsCart();
     }
   });
 });

@@ -103,17 +103,6 @@ const InvalidSuscribe = () => {
   successAlert();
 };
 
-//Alerta Success
-const successAlert = () => {
-  suscripcion.addEventListener("click", () => {
-    Swal.fire({
-      title: "Gracias!",
-      text: "Ya enviamos tu consulta, te responderemos lo más pronto posible. Que tengas un gran día!",
-      icon: "success",
-      confirmButtonText: "Enviado",
-    });
-  });
-};
 
 // Validaciones con Expresiones Regulares
 const validaTexto = (whatsapp) => {
@@ -123,9 +112,41 @@ const validaTexto = (whatsapp) => {
 const validaEmail = (email) => {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
     email
-  );
-};
+    );
+  };
+  
+  const validaWsp = (whatsapp) => {
+    return /^\d{9,13}$/.test(whatsapp);
+  };
+  
+  //Alerta Success
+  const successAlert = () => {
+    suscripcion.addEventListener("click", () => {
+      Swal.fire({
+        title: "Gracias!",
+        text: "Ya enviamos tu consulta, te responderemos lo más pronto posible. Que tengas un gran día!",
+        icon: "success",
+        confirmButtonText: "Enviado",
+      });
+    });
+  };
 
-const validaWsp = (whatsapp) => {
-  return /^\d{9,13}$/.test(whatsapp);
-};
+export {
+  formulario,
+  nombre,
+  apellido,
+  email,
+  whatsapp,
+  textArea,
+  suscripcion,
+
+  //Funciones
+  validaCampos,
+  validarVacio,
+  validarOk,
+  InvalidSuscribe,
+  validaTexto,
+  validaEmail,
+  validaWsp,
+  successAlert
+}

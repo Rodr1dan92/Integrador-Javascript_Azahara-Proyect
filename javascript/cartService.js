@@ -158,3 +158,26 @@ function updateTotalsCart() {
   cantNumber.innerText = suma;
   priceNumber.innerText = precio;
 }
+
+export {
+  //Selectores
+  cartInfo,
+  lineaProd,
+  containerProducts,
+  cardProduct,
+  valorTotal,
+  totalesCart,
+  numbrerCartIcon,
+  cartProducts,
+
+  //Funciones
+  addToCartLoclStorage,
+  addProductLocStorage,
+  decreaseProductCart,
+  updateCartNumb,
+  totalFootCart,
+  limpiarCarrito,
+  carritoVacio,
+  UpProdToCart,
+  updateTotalsCart
+}
