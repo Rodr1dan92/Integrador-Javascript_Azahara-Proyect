@@ -11,6 +11,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Barlow";
+  border: solid 1px red;
 }
 
 body {
@@ -646,7 +647,7 @@ body {
 }
 
 #contacto .fila1 input {
-  width: 90%;
+  /* width: 90%; */
   padding: 15px;
   border: none;
   border-radius: 5px;
@@ -666,7 +667,7 @@ body {
 }
 
 #contacto .fila input {
-  width: 95%;
+  /* width: 95%; */
   padding: 15px;
   border: none;
   border-radius: 5px;
@@ -699,7 +700,7 @@ body {
   padding: 15px;
   font-size: 20px;
   outline: none;
-  width: 95%;
+  width: 100%;
   height: 200px;
   text-align: center;
 }
