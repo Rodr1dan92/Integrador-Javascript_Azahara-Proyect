@@ -2,15 +2,11 @@
 
 const cartInfo = document.querySelector(".cart-product");
 const lineaProd = document.querySelector(".linea-producto");
-
 const containerProducts = document.querySelector("#products-container");
 const cardProduct = document.querySelector(".card-cosmetic");
-
 const valorTotal = document.querySelector(".total-pagar");
 const totalesCart = document.querySelector(".cart-total");
-
 const numbrerCartIcon = document.getElementById("contador-productos");
-
 const cartProducts = document.querySelector(".container-cart-products");
 
 // Agregar producto al Local Storage de la web
@@ -109,6 +105,7 @@ const carritoVacio = () => {
   `;
 };
 
+
 //Generar lineas de productos en el modal del carrito
 const UpProdToCart = () => {
   cartProducts.innerHTML = "";
@@ -119,12 +116,15 @@ const UpProdToCart = () => {
       const newProduct = document.createElement("div");
       newProduct.classList.add("cart-product");
       newProduct.innerHTML = `
-    <div class="info-cart-product">
-    <span class="cantidad-producto-carrito">${product.cantidad}</span>
-    <p class="titulo-producto-carrito">${product.nombre}</p>
-    <span class="precio-producto-carrito">${product.precio}</span>
+      <div class="info-cart-product">
+      <div class="cantPCart">
+        <button>+</button>
+        <span class="cantidad-producto-carrito">${product.cantidad}</span>
+        <button>-</button>
+      </div>
+      <p class="titulo-producto-carrito">${product.nombre}</p>
+      <span class="precio-producto-carrito">${product.precio * product.cantidad}</span>
     </div>
-    <button class="icon-close">✖</button>
     `;
 
       cartProducts.append(newProduct);
@@ -132,14 +132,21 @@ const UpProdToCart = () => {
       newProduct
         .getElementsByTagName("button")[0]
         .addEventListener("click", () => {
+          addToCartLoclStorage(product);
+        });
+      newProduct
+        .getElementsByTagName("button")[1]
+        .addEventListener("click", () => {
           decreaseProductCart(product);
         });
     });
   } else {
     carritoVacio();
-  }
+  } 
+  if (productsInStorage.length !== 0) {
   totalFootCart();
   updateTotalsCart();
+  }
 };
 
 /** Actualiza el total de precio y unidades de la página del carrito */
@@ -154,10 +161,10 @@ function updateTotalsCart() {
       suma += prod.cantidad;
       precio += prod.precio * prod.cantidad;
     });
+    cantNumber.innerText = suma;
+    priceNumber.innerText = precio;
   }
-  cantNumber.innerText = suma;
-  priceNumber.innerText = precio;
-}
+};
 
 export {
   //Selectores

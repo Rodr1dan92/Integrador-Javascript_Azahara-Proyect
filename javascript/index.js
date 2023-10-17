@@ -43,13 +43,13 @@ const crearTarjetasProductos = (productos) => {
 
     cardContainerProd.append(nuevoProducto);
 
-    nuevoProducto.firstElementChild.firstElementChild;
     const objeto = {
       id: producto.id,
       nombre: producto.nombre,
       precio: producto.precio,
     };
-    nuevoProducto.addEventListener("click", () => cartService.addToCartLoclStorage(objeto));
+    const agregarAlCarrito = nuevoProducto.getElementsByClassName("agregarBtn");
+    agregarAlCarrito[0].addEventListener("click", () => cartService.addToCartLoclStorage(objeto));
     cartService.UpProdToCart(producto);
   });
 };

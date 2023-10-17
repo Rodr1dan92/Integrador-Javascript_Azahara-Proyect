@@ -2,6 +2,28 @@
 
 @media screen and (max-width: 568px) {
 
+  .contenedor-header {
+    padding: 0;
+  }
+
+  #cart-container img{
+    width: 40px;
+    height: 40px;
+  }
+
+  #inicio .info {
+    width: 250px;
+  }
+  
+  #inicio .info h4{
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .container-cart-products {
+    width: 220px;
+  }
+
   #nosotros {
     margin-top: 70px;
     padding: 20px 0;
@@ -16,8 +38,8 @@
     padding: 30px 0;
   }
 
-  .card-cosmetic {
-    height: 415px;
+  #info-cards p{
+    font-size: 25px;
   }
 
   .info-cards-container {
@@ -25,16 +47,37 @@
   }
 
   .info-cards-container .card {
-    height: 800px;
+    height: fit-content;
+    padding: 60px 30px;
   }
   
   .info-cards-container .card p{
+    display: none;
+  }
+  
+  .carrito-productos .barra-lateral {
+    margin-bottom: 15em;
+  }
+
+  #shop-container, #products-container {
     padding: 0;
   }
 
+  #products-container .card-cosmetic {
+    width: 14rem;
+    height: 15rem;
+  }
 
-  .carrito-productos .barra-lateral {
-    margin-bottom: 15em;
+  .startDiv {
+    height: 50px;
+  }
+
+  .precioCard{
+    margin-top: 2em;
+  }
+
+  .startDiv img{
+    width: 70%;
   }
 }
 
@@ -58,14 +101,6 @@
     width: 100%;
   }
 
-  /* #contacto .fila input { */
-    /* width: 90%; */
-  /* } */
-
-  /* #contacto textarea {
-    width: 90%;
-  } */
-
   #contacto .fila1 {
     flex-direction: column;
   }
@@ -73,9 +108,7 @@
   #contacto .formulario {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
-    /* margin-left: 50px; */
   }
 
   #contacto .fila-datos li {
@@ -219,10 +252,6 @@
   
   #productos .fila .col2 p {
     font-size: 25px;
-  }
-
-  .card-cosmetic {
-    height: 40%;
   }
 
   .startDiv {
