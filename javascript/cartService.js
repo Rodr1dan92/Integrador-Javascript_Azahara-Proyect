@@ -118,6 +118,7 @@ const carritoVacio = () => {
   `;
 };
 
+
 //Generar lineas de productos en el modal del carrito
 const UpProdToCart = () => {
   cartProducts.innerHTML = "";
@@ -147,6 +148,11 @@ const UpProdToCart = () => {
 
       newProduct
         .getElementsByTagName("button")[0]
+        .addEventListener("click", () => {
+          addToCartLoclStorage(product);
+        });
+      newProduct
+        .getElementsByTagName("button")[1]
         .addEventListener("click", () => {
           addToCartLoclStorage(product);
         });
