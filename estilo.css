@@ -3,6 +3,7 @@
 :root {
   --principal: #cf92f2;
   --backgroung-global: #ffedfd;
+  --header-scroll: rgb(114, 40, 211);
   --gradient: linear-gradient(to bottom, #8d13a0, #ffffff);
 }
 
@@ -11,7 +12,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Barlow";
-  border: solid 1px red;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -26,6 +30,25 @@ body {
   background-color: rgba(239, 156, 239, 0.3);
   z-index: 2;
   padding: 0 20px;
+}
+
+.contenedor-header.scroll {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  background-color: var(--header-scroll);
+}
+
+.contenedor-header.scroll header{
+  padding: 0;
+}
+
+.contenedor-header.scroll header nav a{
+  color: #e4d97d;
+}
+
+.contenedor-header.scroll #cart-container #cart{
+  color: #99c4e7;
 }
 
 .contenedor-header header {
@@ -78,6 +101,22 @@ body {
   transform: scale(1.2);
 }
 
+.cantPCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.cantPCart button {
+  padding: 2px 9px;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  background-color: #ffff;
+  cursor: pointer;
+}
+
 #cart-container {
   display: flex;
   justify-content: space-around;
@@ -107,6 +146,10 @@ body {
   border-radius: 10px;
 }
 
+.contenedor-header header > .scroll {
+  top: 60px
+}
+
 .container-cart-products h3 {
   text-align: center;
   font-size: 25px;
@@ -115,15 +158,21 @@ body {
 .cart-product {
   display: flex;
   justify-content: space-between;
-  padding: 30px;
+  align-items: center;
+  padding: 20px 50px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.cart-product .nomb-precio {
+  display: flex;
 }
 
 .info-cart-product {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   flex: 0.6;
-  gap: 45px;
+  gap: 80px;
 }
 
 .titulo-producto-carrito {
@@ -143,22 +192,6 @@ body {
 .cantidad-producto-carrito {
   font-weight: bold;
   font-size: 20px;
-}
-
-.icon-close {
-  text-align: center;
-  cursor: pointer;
-  height: 28px;
-  padding: 0 8px;
-  color: #fff;
-  vertical-align: top;
-  border-radius: 3px;
-  border: 1px solid transparent;
-  transition: all 0.3s ease;
-  background: #cc4d29;
-  border-color: #cc4d29;
-  font-weight: 400;
-  font-size: 11px;
 }
 
 .cart-total {
@@ -203,8 +236,13 @@ body {
   transform: scaleX(1.12);
 }
 
+.colored-toast.swal2-icon-info {
+  background-color: #d35a21 !important;
+  color: #ffff;
+}
+
 #totales span {
-  margin-left: 14px;
+  margin-left: 6px;
 }
 
 .ocultar-carrito {
@@ -296,7 +334,7 @@ body {
 
 #productos {
   background-color: snow;
-  padding: 130px 20px;
+  padding: 80px 20px;
   position: relative;
   margin: auto;
   display: flex;
@@ -347,6 +385,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 80px 20px;
 }
 
 /*-------------------------------------- SECCION SHOP -----------------------------------*/
@@ -373,7 +412,7 @@ body {
 
 .container-prod {
   grid-area: productos;
-  margin-top: 25px;
+  margin-top: 120px;
 }
 
 .barra-lateral #list-barra {
@@ -381,6 +420,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 2.5rem;
   gap: 30px;
   padding: 10px 15px;
 }
@@ -398,7 +438,6 @@ body {
 
 #list-barra .menu-btn {
   font-size: 1.5em;
-  font-weight: 600;
   cursor: pointer;
 }
 
@@ -432,7 +471,7 @@ body {
 }
 
 .card-cosmetic {
-  height: 600px;
+  height: auto;
   max-width: 250px;
   display: flex;
   flex-wrap: wrap;
@@ -448,9 +487,6 @@ body {
   transform: translateY(-8px);
 }
 
-.startDiv {
-  height: 450px;
-}
 
 .startDiv img {
   width: 100%;
@@ -514,9 +550,8 @@ body {
   text-align: center;
 }
 
-#info-cards > p {
+#info-cards p {
   width: 80%;
-  font-size: 25px;
   text-align: center;
 }
 
@@ -532,11 +567,6 @@ body {
   gap: 50px;
 }
 
-.info-cards-container .card p{
-  font-size: 21px;
-  padding: 0 30px;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -544,8 +574,8 @@ body {
   align-items: center;
   text-align: center;
   width: 400px;
-  height: 600px;
-  gap: 30px;
+  height: 570px;
+  gap: 20px;
   border-radius: 10px;
   padding: 25px 15px;
   background: var(--principal);
@@ -647,7 +677,7 @@ body {
 }
 
 #contacto .fila1 input {
-  /* width: 90%; */
+  width: 90%;
   padding: 15px;
   border: none;
   border-radius: 5px;
@@ -667,7 +697,6 @@ body {
 }
 
 #contacto .fila input {
-  /* width: 95%; */
   padding: 15px;
   border: none;
   border-radius: 5px;
@@ -683,6 +712,7 @@ body {
 }
 
 #form .form-empty-field #messageArea {
+  width: 100%;
   border: 5px solid;
   border-radius: 20px;
   border-color: #e63124;
@@ -690,8 +720,10 @@ body {
 }
 
 .form-empty-field p {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 600;
   text-align: center;
+  color: #fcf411;
 }
 
 #contacto textarea {
@@ -700,7 +732,6 @@ body {
   padding: 15px;
   font-size: 20px;
   outline: none;
-  width: 100%;
   height: 200px;
   text-align: center;
 }
@@ -731,6 +762,11 @@ body {
   color: #270265;
 }
 
+.colored-toast.swal2-icon-success {
+  background-color: #a5dc86 !important;
+  color: black;
+}
+
 /* ---------------------Contacto Datos ---------------------------*/
 
 #contacto .fila-datos {
@@ -745,11 +781,11 @@ body {
 
 #contacto .fila-datos li {
   color: #000000;
-  font-size: 25px;
+  font-size: 20px;
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 5rem;
+  gap: 2rem;
   padding: 20px;
 }
 

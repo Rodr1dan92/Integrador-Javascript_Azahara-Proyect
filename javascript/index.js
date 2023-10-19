@@ -10,7 +10,10 @@ const burgerMenu = document.getElementById("burguer-menu");
 const cardContainerProd = document.getElementById("products-container");
 const CategoriasLat = document.querySelectorAll(".cat");
 const tituloDiv = document.getElementById("titulo-div");
-
+const navHeader = document.querySelector(".contenedor-header");
+const cartContainer = document.querySelector(".container-cart-products");
+const navResponsive = document.querySelector("#nav");
+const botonAñadir = document.querySelector(".agregarBtn");
 
 //Eventos para botones del navbar
 burgerMenu.addEventListener("click", () => {
@@ -21,6 +24,13 @@ burgerMenu.addEventListener("click", () => {
 botonCart.addEventListener("click", () => {
   cartService.cartProducts.classList.toggle("ocultar-carrito");
 });
+
+//Scroll Header
+window.addEventListener('scroll', function(){
+  navHeader.classList.toggle('scroll', window.scrollY > 0);
+  cartContainer.classList.toggle('scroll', window.scrollY > 0);
+  navResponsive.classList.toggle('scroll', window.scrollY > 0);
+})
 
 // Crear card en el div del contenedor de productos
 const crearTarjetasProductos = (productos) => {
@@ -43,14 +53,18 @@ const crearTarjetasProductos = (productos) => {
 
     cardContainerProd.append(nuevoProducto);
 
-    nuevoProducto.firstElementChild.firstElementChild;
     const objeto = {
       id: producto.id,
       nombre: producto.nombre,
       precio: producto.precio,
     };
-    nuevoProducto.addEventListener("click", () => cartService.addToCartLoclStorage(objeto));
+    const agregarAlCarrito = nuevoProducto.getElementsByClassName("agregarBtn");
+    agregarAlCarrito[0].addEventListener("click", () => {
+    cartService.addToCartLoclStorage(objeto)
+    notificationCard();
+    });
     cartService.UpProdToCart(producto);
+
   });
 };
 
@@ -79,3 +93,23 @@ CategoriasLat.forEach((boton) => {
     }
   });
 });
+
+
+//Alerta boton agregar carrito
+const notificationCard = () => {
+  const Toast = Swal.mixin({   
+    toast: true,
+    position: 'top-right',
+    iconColor: 'white',
+    customClass: {
+      popup: 'colored-toast'
+    },
+    showConfirmButton: false,
+    timer: 1200,
+    timerProgressBar: true
+  });
+  Toast.fire({
+    icon: 'success',
+    title: 'Producto Agregado'
+  });
+}
