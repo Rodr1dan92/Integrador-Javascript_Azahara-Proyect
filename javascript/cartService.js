@@ -39,12 +39,14 @@ let addToCartLoclStorage = (producto) => {
   updateTotalsCart();
 };
 
+//Actualiza cantidad en el Local Storage
 const addProductLocStorage = (producto) => {
   const nuevoProducto = producto;
   nuevoProducto.cantidad = 1;
   return nuevoProducto;
 };
 
+//Disminuye cantidad del Producto en el carrito
 const decreaseProductCart = (producto) => {
   let LocStorage = JSON.parse(localStorage.getItem("cosmeticos"));
   let cantProdTotal = 0;
@@ -63,6 +65,7 @@ const decreaseProductCart = (producto) => {
   updateTotalsCart();
 };
 
+//Actualiza el numero del logo del carrito
 const updateCartNumb = () => {
   let suma = 0;
   const LclStorage = JSON.parse(localStorage.getItem("cosmeticos"));
@@ -73,6 +76,7 @@ const updateCartNumb = () => {
   numbrerCartIcon.innerText = 0;
 };
 
+//Lógica de totales del carrito
 const totalFootCart = () => {
   const totalCart = document.createElement("div");
   totalCart.classList.add("cart-total");
@@ -103,6 +107,7 @@ const totalFootCart = () => {
   })
 };
 
+//Elimina productos del carrito
 const limpiarCarrito = () => {
   localStorage.removeItem("cosmeticos");
   carritoVacio();
@@ -112,6 +117,7 @@ const limpiarCarrito = () => {
 
 updateCartNumb();
 
+//Mensaje de carrito vacío
 const carritoVacio = () => {
   cartProducts.innerHTML = `
     <h3>Agrega un Producto</h3>
@@ -171,7 +177,7 @@ const UpProdToCart = () => {
   }
 };
 
-/** Actualiza el total de precio y unidades de la página del carrito */
+// Actualiza el total de precio y unidades de la página del carrito
 function updateTotalsCart() {
   const productos = JSON.parse(localStorage.getItem("cosmeticos"));
   const cantNumber = document.getElementById("cantidad");
@@ -187,6 +193,8 @@ function updateTotalsCart() {
     priceNumber.innerText = precio;
   }
 }
+
+//Notificación de Carrito Vacío
 
 const notificationClear = () => {
   const Toast = Swal.mixin({

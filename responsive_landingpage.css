@@ -20,6 +20,7 @@
 
 }
 
+/*-----------------------------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 568px) {
   .contenedor-header {
@@ -117,10 +118,7 @@
   .card-cosmetic {
     max-width: 200px;
   }
-  /* #products-container .card-cosmetic {
-    /* width: auto; */
-  /* }  */
-
+  
   .startDiv {
     display: flex;
     flex-direction: column;

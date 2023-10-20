@@ -117,21 +117,6 @@ body {
   cursor: pointer;
 }
 
-.cantPCart {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-
-.cantPCart button{
-  padding: 2px 9px;
-  font-size: 20px;
-  font-weight: 600;
-  border: none;
-  background-color: #ffff;
-}
-
 #cart-container {
   display: flex;
   justify-content: space-around;
@@ -173,8 +158,6 @@ body {
 .cart-product {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
   align-items: center;
   padding: 20px 50px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -259,7 +242,6 @@ body {
 }
 
 #totales span {
-  margin-left: 6px;
   margin-left: 6px;
 }
 
@@ -352,7 +334,6 @@ body {
 
 #productos {
   background-color: snow;
-  padding: 80px 20px;
   padding: 80px 20px;
   position: relative;
   margin: auto;
@@ -491,7 +472,6 @@ body {
 
 .card-cosmetic {
   height: auto;
-  height: auto;
   max-width: 250px;
   display: flex;
   flex-wrap: wrap;
@@ -571,7 +551,6 @@ body {
 }
 
 #info-cards p {
-#info-cards p {
   width: 80%;
   text-align: center;
 }
@@ -595,8 +574,6 @@ body {
   align-items: center;
   text-align: center;
   width: 400px;
-  height: 570px;
-  gap: 20px;
   height: 570px;
   gap: 20px;
   border-radius: 10px;
@@ -705,7 +682,6 @@ body {
 
 #contacto .fila1 input {
   width: 90%;
-  width: 90%;
   padding: 15px;
   border: none;
   border-radius: 5px;
@@ -813,7 +789,6 @@ body {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 2rem;
   gap: 2rem;
   padding: 20px;
 }
