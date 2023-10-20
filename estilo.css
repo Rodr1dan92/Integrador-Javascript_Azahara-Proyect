@@ -318,7 +318,7 @@ body {
 #nosotros {
   background-size: cover;
   background-color: snow;
-  padding: 130px 20px;
+  padding-top: 100px;
   text-align: center;
 }
 
@@ -550,6 +550,14 @@ body {
   text-align: center;
 }
 
+#info-cards h6 {
+  text-align: center;
+  padding: 30px 70px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+
 #info-cards p {
   width: 80%;
   text-align: center;
@@ -662,9 +670,6 @@ body {
   margin: auto;
 }
 
-#contacto .contenedor-titulo .info {
-  margin-left: 30px;
-}
 
 #contacto .contenedor-titulo .info h2 {
   font-size: 3rem;

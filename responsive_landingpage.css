@@ -95,14 +95,15 @@
   }
 
   .info-cards-container .card h3 {
-    font-size: 15px;
+    font-size: 18px;
+    padding: 20px;
   }
 
   .info-cards-container .card p {
     display: none;
   }
 
-  .carrito-productos .barra-lateral {
+  .carrito-productos .barra-lateral{
     margin-bottom: 15em;
   }
 
@@ -159,9 +160,14 @@
     justify-content: center;
   }
 
+  .formulario .send-form{
+    margin-top: 30px;
+  }
+
   #contacto .fila-datos li {
     font-weight: 700;
     justify-content: center;
+    text-align: center;
   }
 
   #contacto .fila-datos li strong {
@@ -206,7 +212,8 @@
   }
 
   #nosotros p {
-    padding: 70px 45px;
+    padding: 85px 60px;
+    font-size: 22px;
   }
 
   .carrito-productos {
