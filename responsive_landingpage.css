@@ -296,18 +296,9 @@
     font-size: 25px;
   }
 
-  .startDiv {
-    height: 100px;
-  } */
-
   .startDiv p {
     display: none;
   }
-
-  /* .precioCard {
-    margin-top: 11em;
-    height: 100px;
-  } */
 
   #servicios {
     display: block;

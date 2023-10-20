@@ -160,11 +160,6 @@ const UpProdToCart = () => {
       newProduct
         .getElementsByTagName("button")[1]
         .addEventListener("click", () => {
-          addToCartLoclStorage(product);
-        });
-      newProduct
-        .getElementsByTagName("button")[1]
-        .addEventListener("click", () => {
           decreaseProductCart(product);
         });
     });
